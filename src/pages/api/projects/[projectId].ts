@@ -9,35 +9,35 @@ export const getWorkPackagesFromProject = async (
   const session = await getSession({ req });
   const accessToken = (session?.token as any).accessToken;
 
-  const { data: project } = await axios.get(
+  const projectPromise = axios.get(
     `${process.env.NEXT_PUBLIC_OP_URL}/api/v3/projects/${projectId}`,
     {
       headers: { Authorization: `Bearer ${accessToken}` },
     }
   );
 
-  const { data: versions } = await axios.get(
+  const versionsPromise = axios.get(
     `${process.env.NEXT_PUBLIC_OP_URL}/api/v3/projects/${projectId}/versions`,
     {
       headers: { Authorization: `Bearer ${accessToken}` },
       params: { pageSize: 200 },
     }
   );
-  const { data: statuses } = await axios.get(
+  const statusPromise = axios.get(
     `${process.env.NEXT_PUBLIC_OP_URL}/api/v3/statuses`,
     {
       headers: { Authorization: `Bearer ${accessToken}` },
       params: { pageSize: 200 },
     }
   );
-  const { data: types } = await axios.get(
+  const typesPromise = axios.get(
     `${process.env.NEXT_PUBLIC_OP_URL}/api/v3/types`,
     {
       headers: { Authorization: `Bearer ${accessToken}` },
       params: { pageSize: 200 },
     }
   );
-  const { data: workPackages, config } = await axios.get(
+  const workPackagesPromise = axios.get(
     `${process.env.NEXT_PUBLIC_OP_URL}/api/v3/projects/${projectId}/work_packages`,
     {
       headers: { Authorization: `Bearer ${accessToken}` },
@@ -47,6 +47,20 @@ export const getWorkPackagesFromProject = async (
       },
     }
   );
+
+  const [
+    { data: project },
+    { data: versions },
+    { data: statuses },
+    { data: types },
+    { data: workPackages },
+  ] = await Promise.all([
+    projectPromise,
+    versionsPromise,
+    statusPromise,
+    typesPromise,
+    workPackagesPromise,
+  ]);
 
   const result = {
     id: project.id,
@@ -118,7 +132,6 @@ export const getWorkPackagesFromProject = async (
       })),
     })),
   };
-
   return result;
 };
 
