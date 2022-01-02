@@ -4,7 +4,7 @@ An kanban interface for [OpenProject](https://www.openproject.org).
 
 ## Features
 
-Open Kanban allows you to visualize your projects in a kanban
+Open Kanban allows you to visualize your projects in a kanban.
 
 ![Kanban view](./doc/kanban.png)
 
@@ -12,7 +12,7 @@ Interact with User Stories with drag and drop, mark task as done with checkboxes
 
 ![Kanban view](./doc/detail.png)
 
-Rest your eyes with a nice dark mode.
+Rest your eyes with a nice dark mode 🌙 .
 
 ![Kanban view](./doc/kanban-dark.png)
 

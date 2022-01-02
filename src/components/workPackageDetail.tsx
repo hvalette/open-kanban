@@ -23,7 +23,6 @@ const WorkPackageDetail = ({
   onUpdate,
 }: any) => {
   const { data, isLoading } = useWorkPackage(workPackage.id);
-  const { data: comments } = useWorkPackageActivities(workPackage.id);
   const { data: children } = useWorkPackageChildren(workPackage.id);
   const { data: statuses } = useStatus();
   const { data: members } = useProjectsMembers(projectId);
@@ -207,17 +206,6 @@ const WorkPackageDetail = ({
                         </label>
                       </div>
                     ))}
-                </div>
-                <div className="h-full overflow-scroll">
-                  {comments &&
-                    comments._embedded.elements.map((comment: any) =>
-                      comment.details.map((detail: any, index: number) => (
-                        <div
-                          key={comment.id + "-" + index}
-                          dangerouslySetInnerHTML={{ __html: detail.html }}
-                        ></div>
-                      ))
-                    )}
                 </div>
               </div>
               <div>
