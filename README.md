@@ -1,6 +1,9 @@
-# Open Kanban
-
-An kanban interface for [OpenProject](https://www.openproject.org).
+<p align="center">
+    <img src="./doc/logo.png" />
+</p>
+<p align="center">
+    An kanban interface for <a href="https://www.openproject.org">OpenProject</a>
+</p>
 
 ## Features
 
