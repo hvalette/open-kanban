@@ -22,3 +22,7 @@ export const changeTheme = () => {
   }
   initTheme();
 };
+
+export const isDarkTheme = () => {
+  return document.documentElement.classList.contains("dark");
+};
