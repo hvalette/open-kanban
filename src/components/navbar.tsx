@@ -56,7 +56,8 @@ const Navbar = () => {
                 focusable="false"
                 data-prefix="fas"
                 data-icon="home"
-                className="svg-inline--fa fa-home fa-w-18 w-8 min-w-fit h-8 mx-4"
+                className="svg-inline--fa fa-home fa-w-18 w-8 h-8 mx-4"
+                style={{ minWidth: "2rem" }}
                 role="img"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 576 512"
@@ -89,7 +90,8 @@ const Navbar = () => {
                 focusable="false"
                 data-prefix="fas"
                 data-icon="sun"
-                className="svg-inline--fa fa-sun fa-w-16 w-8 min-w-fit h-8 mx-4"
+                className="svg-inline--fa fa-sun fa-w-16 w-8 h-8 mx-4"
+                style={{ minWidth: "2rem" }}
                 role="img"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 512 512"
@@ -105,7 +107,8 @@ const Navbar = () => {
                 focusable="false"
                 data-prefix="fas"
                 data-icon="moon"
-                className="svg-inline--fa fa-moon fa-w-16 w-8 min-w-fit h-8 mx-4"
+                className="svg-inline--fa fa-moon fa-w-16 w-8 h-8 mx-4"
+                style={{ minWidth: "2rem" }}
                 role="img"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 512 512"
@@ -127,7 +130,10 @@ const Navbar = () => {
         <li className="w-full font-bold cursor-pointer text-center hover:bg-slate-100 dark:hover:bg-gray-700 transition-colors">
           <Link href={"#"} passHref>
             <div className="flex items-center h-16">
-              <figure className="rounded-full mx-4 min-w-fit">
+              <figure
+                className="rounded-full mx-4"
+                style={{ minWidth: "2rem" }}
+              >
                 <Image
                   src={getAvatarUrl(session?.user?.name ?? "")}
                   alt="Connected user avatar"
@@ -154,7 +160,8 @@ const Navbar = () => {
               focusable="false"
               data-prefix="fas"
               data-icon="sign-out-alt"
-              className="svg-inline--fa fa-home fa-w-18 w-8 min-w-fit h-8 mx-4"
+              className="svg-inline--fa fa-home fa-w-18 w-8 h-8 mx-4"
+              style={{ minWidth: "2rem" }}
               role="img"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 512 512"

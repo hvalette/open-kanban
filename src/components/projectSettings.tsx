@@ -52,7 +52,7 @@ const ProjectSettings = ({
           focusable="false"
           data-prefix="fas"
           data-icon="angle-left"
-          className={`svg-inline--fa fa-angle-left fa-w-8 w-8 min-w-fit h-8 transition-all ${
+          className={`svg-inline--fa fa-angle-left fa-w-8 w-8 h-8 transition-all ${
             isOpen ? "rotate-180" : " "
           }`}
           role="img"
