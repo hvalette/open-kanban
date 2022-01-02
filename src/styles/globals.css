@@ -9,3 +9,27 @@
 .Toastify__toast {
   @apply dark:bg-gray-800 dark:text-gray-50;
 }
+
+/* scrollbar */
+body::-webkit-scrollbar {
+  width: 16px;
+  @apply bg-white dark:bg-gray-800;
+}
+
+body::-webkit-scrollbar-track {
+  @apply bg-white dark:bg-gray-800;
+}
+
+body::-webkit-scrollbar-thumb {
+  border-radius: 16px;
+  border: 4px solid;
+  @apply bg-slate-200 dark:bg-gray-700 border-white dark:border-gray-800;
+}
+
+body::-webkit-scrollbar-corner {
+  @apply bg-white dark:bg-gray-800;
+}
+
+body::-webkit-scrollbar-button {
+  display: none;
+}
