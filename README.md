@@ -1,33 +1,61 @@
+# Open Kanban
+
+An kanban interface for [OpenProject](https://www.openproject.org).
+
+## Features
+
+Open Kanban allows you to visualize your projects in a kanban
+
+![Kanban view](./doc/kanban.png)
+
+Interact with User Stories with drag and drop, mark task as done with checkboxes and assign users.
+
+![Kanban view](./doc/detail.png)
+
+Rest your eyes with a nice dark mode.
+
+![Kanban view](./doc/kanban-dark.png)
+
+## Installation
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+### Environment variables
 
-First, run the development server:
+```env
+OP_CLIENT_ID=
+OP_CLIENT_SECRET=
+NEXT_AUTH_SECRET=
+NEXT_PUBLIC_OP_URL=
+```
+
+For OP_CLIENT_ID and OP_CLIENT_SECRET, follow the [documentation](https://www.openproject.org/docs/system-admin-guide/authentication/oauth-applications/) to get your client id and secret.
+
+NEXT_AUTH_SECRET, generate a unique secret. You can use :
+
+```
+openssl rand -base64 32
+```
+
+For NEXT_PUBLIC_OP_URL, it's your open project URL.
+
+### Local
+
+Clone this repository
+
+Install dependancies
+
+```bash
+npm install
+```
+
+Run the dev server
 
 ```bash
 npm run dev
-# or
-yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
+### Deploy on Vercel
 
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
