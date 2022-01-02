@@ -7,7 +7,7 @@
 
 ## Features
 
-Open Kanban allows you to visualize your projects in a kanban.
+Build with OpenProject's API, Open Kanban allows you to visualize your projects in a kanban (makes sense).
 
 ![Kanban view](./doc/kanban.png)
 
